@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="white"/>
+  
+  <!-- Title -->
+  <text x="200" y="25" font-family="Arial" font-size="16" font-weight="bold">Interpretation 1: (id + id) * id</text>
+  <text x="550" y="25" font-family="Arial" font-size="16" font-weight="bold">Interpretation 2: id + (id * id)</text>
+  
+  <!-- First Tree (Left) -->
+  <!-- Level 1 -->
+  <circle cx="200" cy="60" r="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="200" y="65" font-family="Arial" font-size="16" text-anchor="middle">E</text>
+  
+  <!-- Level 2 -->
+  <circle cx="150" cy="120" r="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="150" y="125" font-family="Arial" font-size="16" text-anchor="middle">E</text>
+  
+  <rect x="200" y="100" width="25" height="25" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" rx="4"/>
+  <text x="212.5" y="118" font-family="Arial" font-size="16" text-anchor="middle">*</text>
+  
+  <circle cx="250" cy="120" r="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="250" y="125" font-family="Arial" font-size="16" text-anchor="middle">E</text>
+  
+  <!-- Level 3 (Left subtree) -->
+  <circle cx="100" cy="180" r="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="100" y="185" font-family="Arial" font-size="16" text-anchor="middle">E</text>
+  
+  <rect x="150" y="160" width="25" height="25" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" rx="4"/>
+  <text x="162.5" y="178" font-family="Arial" font-size="16" text-anchor="middle">+</text>
+  
+  <circle cx="200" cy="180" r="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="200" y="185" font-family="Arial" font-size="16" text-anchor="middle">E</text>
+  
+  <!-- Level 3 (Right subtree) -->
+  <rect x="250" y="180" width="30" height="25" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" rx="4"/>
+  <text x="265" y="198" font-family="Arial" font-size="16" text-anchor="middle">id</text>
+  
+  <!-- Level 4 -->
+  <rect x="100" y="240" width="30" height="25" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" rx="4"/>
+  <text x="115" y="258" font-family="Arial" font-size="16" text-anchor="middle">id</text>
+  
+  <rect x="200" y="240" width="30" height="25" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" rx="4"/>
+  <text x="215" y="258" font-family="Arial" font-size="16" text-anchor="middle">id</text>
+  
+  <!-- Second Tree (Right) -->
+  <!-- Level 1 -->
+  <circle cx="550" cy="60" r="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="550" y="65" font-family="Arial" font-size="16" text-anchor="middle">E</text>
+  
+  <!-- Level 2 -->
+  <circle cx="500" cy="120" r="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="500" y="125" font-family="Arial" font-size="16" text-anchor="middle">E</text>
+  
+  <rect x="550" y="100" width="25" height="25" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" rx="4"/>
+  <text x="562.5" y="118" font-family="Arial" font-size="16" text-anchor="middle">+</text>
+  
+  <circle cx="600" cy="120" r="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="600" y="125" font-family="Arial" font-size="16" text-anchor="middle">E</text>
+  
+  <!-- Level 3 (Left subtree) -->
+  <rect x="500" y="180" width="30" height="25" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" rx="4"/>
+  <text x="515" y="198" font-family="Arial" font-size="16" text-anchor="middle">id</text>
+  
+  <!-- Level 3 (Right subtree) -->
+  <circle cx="550" cy="180" r="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="550" y="185" font-family="Arial" font-size="16" text-anchor="middle">E</text>
+  
+  <rect x="600" y="160" width="25" height="25" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" rx="4"/>
+  <text x="612.5" y="178" font-family="Arial" font-size="16" text-anchor="middle">*</text>
+  
+  <circle cx="650" cy="180" r="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="650" y="185" font-family="Arial" font-size="16" text-anchor="middle">E</text>
+  
+  <!-- Level 4 -->
+  <rect x="550" y="240" width="30" height="25" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" rx="4"/>
+  <text x="565" y="258" font-family="Arial" font-size="16" text-anchor="middle">id</text>
+  
+  <rect x="650" y="240" width="30" height="25" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" rx="4"/>
+  <text x="665" y="258" font-family="Arial" font-size="16" text-anchor="middle">id</text>
+  
+  <!-- Tree Edges - First Tree -->
+  <line x1="200" y1="80" x2="150" y2="100" stroke="#1890ff" stroke-width="1.5"/>
+  <line x1="200" y1="80" x2="212.5" y2="100" stroke="#1890ff" stroke-width="1.5"/>
+  <line x1="200" y1="80" x2="250" y2="100" stroke="#1890ff" stroke-width="1.5"/>
+  
+  <line x1="150" y1="140" x2="100" y2="160" stroke="#1890ff" stroke-width="1.5"/>
+  <line x1="150" y1="140" x2="162.5" y2="160" stroke="#1890ff" stroke-width="1.5"/>
+  <line x1="150" y1="140" x2="200" y2="160" stroke="#1890ff" stroke-width="1.5"/>
+  
+  <line x1="250" y1="140" x2="265" y2="180" stroke="#1890ff" stroke-width="1.5"/>
+  
+  <line x1="100" y1="200" x2="115" y2="240" stroke="#1890ff" stroke-width="1.5"/>
+  <line x1="200" y1="200" x2="215" y2="240" stroke="#1890ff" stroke-width="1.5"/>
+  
+  <!-- Tree Edges - Second Tree -->
+  <line x1="550" y1="80" x2="500" y2="100" stroke="#1890ff" stroke-width="1.5"/>
+  <line x1="550" y1="80" x2="562.5" y2="100" stroke="#1890ff" stroke-width="1.5"/>
+  <line x1="550" y1="80" x2="600" y2="100" stroke="#1890ff" stroke-width="1.5"/>
+  
+  <line x1="500" y1="140" x2="515" y2="180" stroke="#1890ff" stroke-width="1.5"/>
+  
+  <line x1="600" y1="140" x2="550" y2="160" stroke="#1890ff" stroke-width="1.5"/>
+  <line x1="600" y1="140" x2="612.5" y2="160" stroke="#1890ff" stroke-width="1.5"/>
+  <line x1="600" y1="140" x2="650" y2="160" stroke="#1890ff" stroke-width="1.5"/>
+  
+  <line x1="550" y1="200" x2="565" y2="240" stroke="#1890ff" stroke-width="1.5"/>
+  <line x1="650" y1="200" x2="665" y2="240" stroke="#1890ff" stroke-width="1.5"/>
+  
+  <!-- Explanation -->
+  <text x="400" y="320" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Why this grammar is ambiguous:</text>
+  <text x="400" y="345" font-family="Arial" font-size="14" text-anchor="middle">The same string "id + id * id" can be interpreted in two different ways.</text>
+  <text x="400" y="370" font-family="Arial" font-size="14" text-anchor="middle">The left tree interprets it as (id + id) * id with multiplication having higher precedence.</text>
+  <text x="400" y="395" font-family="Arial" font-size="14" text-anchor="middle">The right tree interprets it as id + (id * id) with addition having higher precedence.</text>
+  <text x="400" y="420" font-family="Arial" font-size="14" text-anchor="middle">In programming languages, we typically want * to have higher precedence than +,</text>
+  <text x="400" y="445" font-family="Arial" font-size="14" text-anchor="middle">so we would prefer the right interpretation.</text>
+</svg>

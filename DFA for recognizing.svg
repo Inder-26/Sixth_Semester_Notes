@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <!-- Background -->
+  <rect width="700" height="400" fill="white"/>
+  
+  <!-- Title -->
+  <text x="350" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">DFA for Recognizing Identifiers and Numbers</text>
+  
+  <!-- States -->
+  <circle cx="100" cy="150" r="30" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="100" y="155" font-family="Arial" font-size="14" text-anchor="middle">Start</text>
+  
+  <circle cx="250" cy="100" r="30" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="250" y="105" font-family="Arial" font-size="14" text-anchor="middle">ID</text>
+  <circle cx="250" cy="100" r="35" fill="none" stroke="#52c41a" stroke-width="2"/>
+  
+  <circle cx="400" cy="100" r="30" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="400" y="105" font-family="Arial" font-size="14" text-anchor="middle">ID</text>
+  <circle cx="400" cy="100" r="35" fill="none" stroke="#52c41a" stroke-width="2"/>
+  
+  <circle cx="250" cy="200" r="30" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="250" y="205" font-family="Arial" font-size="14" text-anchor="middle">NUM</text>
+  <circle cx="250" cy="200" r="35" fill="none" stroke="#52c41a" stroke-width="2"/>
+  
+  <circle cx="400" cy="200" r="30" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="400" y="205" font-family="Arial" font-size="14" text-anchor="middle">NUM</text>
+  <circle cx="400" cy="200" r="35" fill="none" stroke="#52c41a" stroke-width="2"/>
+  
+  <circle cx="550" cy="150" r="30" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="550" y="155" font-family="Arial" font-size="14" text-anchor="middle">ERROR</text>
+  
+  <!-- Transitions -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1890ff"/>
+    </marker>
+  </defs>
+  
+  <!-- Start to ID -->
+  <path d="M125,135 Q170,100 220,100" stroke="#1890ff" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="170" y="90" font-family="Arial" font-size="12">letter</text>
+  
+  <!-- Start to NUM -->
+  <path d="M125,165 Q170,200 220,200" stroke="#1890ff" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="170" y="220" font-family="Arial" font-size="12">digit</text>
+  
+  <!-- ID to ID -->
+  <path d="M250,70 C250,40 400,40 400,70" stroke="#1890ff" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="325" y="30" font-family="Arial" font-size="12">letter</text>
+  
+  <!-- ID to ID (self loop) -->
+  <path d="M280,100 L370,100" stroke="#1890ff" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="325" y="85" font-family="Arial" font-size="12">digit</text>
+  
+  <!-- NUM to NUM -->
+  <path d="M280,200 L370,200" stroke="#1890ff" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="325" y="185" font-family="Arial" font-size="12">digit</text>
+  
+  <!-- Other transitions to ERROR -->
+  <path d="M400,125 Q450,150 520,150" stroke="#1890ff" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="465" y="135" font-family="Arial" font-size="12">other</text>
+  
+  <path d="M400,175 Q450,150 520,150" stroke="#1890ff" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="465" y="175" font-family="Arial" font-size="12">letter</text>
+  
+  <!-- Example Inputs -->
+  <rect x="50" y="270" width="600" height="125" fill="#f9f0ff" stroke="#722ed1" stroke-width="1" rx="5"/>
+  <text x="350" y="290" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Example Inputs and State Transitions</text>
+  
+  <text x="70" y="320" font-family="Arial" font-size="12">Input: "position"</text>
+  <text x="70" y="340" font-family="Arial" font-size="12">States: Start → ID → ID → ID → ID → ID → ID → ID → ID (Accept as Identifier)</text>
+  
+  <text x="70" y="370" font-family="Arial" font-size="12">Input: "42"</text>
+  <text x="70" y="390" font-family="Arial" font-size="12">States: Start → NUM → NUM (Accept as Number)</text>
+</svg>

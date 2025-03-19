@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- White background -->
+  <rect width="800" height="500" fill="white"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Eliminating Left Recursion</text>
+  
+  <!-- Original Grammar Box - Simple, reliable styling -->
+  <rect x="100" y="100" width="270" height="150" fill="#f0f8ff" stroke="blue" stroke-width="2" rx="10"/>
+  <text x="235" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Original Grammar (Left Recursive)</text>
+  
+  <!-- Original Grammar Rules - Simple formatting with carefully spaced text -->
+  <text x="120" y="170" font-family="monospace" font-size="16">E → </text>
+  <rect x="155" y="155" width="20" height="20" fill="pink" stroke="red" stroke-width="2"/>
+  <text x="165" y="170" font-family="monospace" font-size="16" fill="red" font-weight="bold">E</text>
+  <text x="175" y="170" font-family="monospace" font-size="16"> + T | T</text>
+  <text x="300" y="170" font-family="Arial, sans-serif" font-size="14" fill="red">Left Recursion</text>
+  
+  <text x="120" y="200" font-family="monospace" font-size="16">T → </text>
+  <rect x="155" y="185" width="20" height="20" fill="pink" stroke="red" stroke-width="2"/>
+  <text x="165" y="200" font-family="monospace" font-size="16" fill="red" font-weight="bold">T</text>
+  <text x="175" y="200" font-family="monospace" font-size="16"> * F | F</text>
+  <text x="300" y="200" font-family="Arial, sans-serif" font-size="14" fill="red">Left Recursion</text>
+  
+  <text x="120" y="230" font-family="monospace" font-size="16">F → ( E ) | id</text>
+  
+  <!-- Transformation Arrow - Simple styling -->
+  <text x="400" y="160" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="blue" text-anchor="middle">Transform</text>
+  <polygon points="460,175 480,175 480,170 500,180 480,190 480,185 460,185" fill="blue"/>
+  
+  <!-- Non-Left Recursive Grammar Box - Simple, reliable styling -->
+  <rect x="520" y="100" width="270" height="200" fill="#f0fff0" stroke="green" stroke-width="2" rx="10"/>
+  <text x="655" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Non-Left Recursive Grammar</text>
+  
+  <!-- Non-Left Recursive Grammar Content - Simple mono text -->
+  <text x="540" y="170" font-family="monospace" font-size="16">E → T E'</text>
+  <text x="540" y="200" font-family="monospace" font-size="16">E' → + T E' | ε</text>
+  <text x="540" y="230" font-family="monospace" font-size="16">T → F T'</text>
+  <text x="540" y="260" font-family="monospace" font-size="16">T' → * F T' | ε</text>
+  <text x="540" y="290" font-family="monospace" font-size="16">F → ( E ) | id</text>
+  
+  <!-- Explanation Box - Simple styling -->
+  <rect x="100" y="350" width="600" height="120" fill="lightyellow" stroke="orange" stroke-width="2" rx="10"/>
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Transformation Process</text>
+  
+  <!-- Explanation Content - Simple text -->
+  <text x="120" y="410" font-family="Arial, sans-serif" font-size="16">1. For rule A → A α | β (e.g., E → E + T | T)</text>
+  <text x="120" y="440" font-family="Arial, sans-serif" font-size="16">2. Create a new non-terminal A' (e.g., E')</text>
+  <text x="120" y="470" font-family="Arial, sans-serif" font-size="16">3. Replace with: A → β A' and A' → α A' | ε</text>
+</svg>
